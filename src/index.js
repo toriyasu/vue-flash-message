@@ -15,7 +15,6 @@ class FlashMessage {
       autoEmit: true,
       important: false,
       pauseOnInteract: false,
-      timeout: 0,
 
       // callbacks
       beforeDestroy: null,
@@ -111,6 +110,7 @@ export default {
         },
       },
     });
+    options.timeout = options.timeout || 0;
     options.method = options.method || 'flash';
     options.storage = options.storage || '$flashStorage';
 
